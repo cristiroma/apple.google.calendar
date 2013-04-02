@@ -1,10 +1,10 @@
 Description
 -----------
 
-This script allows you to share your iCloud calendar inside Google calendar.
+This script allows you to share your iCloud calendars inside Google calendar.
 
-The problem is that Apple's robots.txt doesn't allow direct linking from Google calendar, so we must pipe through this script
-
+The problem is that Apple's robots.txt doesn't allow direct linking from Google calendar, so we must pipe through this script.
+The solution is to pipe the calendar through this script.
 
 How to use
 ----------
