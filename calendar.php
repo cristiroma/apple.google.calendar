@@ -1,9 +1,18 @@
 <?php
-if(empty($_GET['url])) {
-    die('Please send the calendar as parameter to this page. ex. http://www.yoursite.com/calendar.php?url=http://p09-calendarws.icloud.com/ca/subscribe/1/ABCDEFGHIJKLMNOPQ
+if(empty($_GET['url'])) {
+    die("Incorrect usage");
 }
-$url = $_GET['url'];
 $filename = 'calendar.ics';
+$allowed = '.icloud.com';
+$url = $_GET['url'];
+
+// Parse the URL and check for icloud.com to avoid malicious usage of the script
+$parse = parse_url($url);
+$host = $parse['host'];
+$l = strlen($allowed);
+if(substr_compare($host, $allowed, -$l, $l) !== 0) {
+  die("Host not allowed");
+}
 
 $data = file_get_contents($url);
 header("Content-Disposition: attachment; filename=\"$filename\"");
