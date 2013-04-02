@@ -11,6 +11,6 @@ How to use
 
 1. Install this script into the root of your webserver, let's say: http://www.yourserver.com/calendar.php
 2. Open your iCloud calendar and copy the link: webcal://p09-calendarws.icloud.com/... 
-3. Put the link in $url variable inside calendar.php and edit to your custom liking
-4. Make sure that now http://www.yourserver.com/calendar.php successfully downloads your page
-5. Open Google calendar, click on the arrow besides "Other calendars" and select "Add by URL" and paste this URL
+3. Build the URL as following: http://www.yourserver.com/calendar.php?url=http://p09-calendarws.icloud.com/.....
+4. Make sure that now the page works (check the downloaded file that is iCal format)
+5. Open Google calendar, click on the arrow besides "Other calendars" and select "Add by URL" and paste the URL from 3)
